@@ -1,0 +1,903 @@
+/*Style CSS
+
+Par Grégoie De Geeter
+*/
+
+/*-----------------------------------------------------------------------------------*/
+/*	01. GENERAL
+/*-----------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'RalewayRegular';
+    src: url('Fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'RalewayBold';
+    src: url('Fonts/Raleway-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'RalewayLight';
+    src: url('Fonts/Raleway-Light.ttf');
+}
+
+h2, h3, p, ul {
+    font-family : 'RalewayRegular';
+}
+
+h1 {
+    font-family : 'RalewayBold';
+}
+
+h4 {
+    font-family : 'RalewayLight';
+    font-size: small;
+}
+
+body 
+{
+   margin : 0px!important;
+}
+#mainContainer {
+    width:90%;
+    margin: auto;
+}
+
+#mainContainer2 {
+    width:90%;
+    margin: auto;
+}
+ul {
+    list-style-type: none;
+    padding-left: 1.5em;
+}
+
+li {
+    font-size: small;
+    line-height: 2em;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	02. MENU
+/*-----------------------------------------------------------------------------------*/
+
+#header {
+    display : flex;
+}
+#logo {
+    height : 3em;
+    flex : 2;
+    margin-top: 25%;
+}
+
+#navbar {
+    display: flex;
+    justify-content : flex-end;
+    margin-top : 2rem;
+    flex : 1 ;
+}
+
+#navbar--mobile {
+display: none;
+}
+
+.navbar--mobile {
+    display: none;
+    }
+
+
+#navbar ul li {
+    display : inline;
+    padding-left : 3em;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color :grey;
+    padding-top: 2.7em;
+}
+
+#navbar ul li a:hover {
+    border-top: 4px solid #0064fc;
+    color : #0064fc;
+}
+
+#navbar ul li a:active {
+    border-top: 4px solid #0064fc;
+    color : #0064fc;
+}
+
+#navbar ul li:nth-child(3) a{
+    font-weight: bold;
+    color : #0064fc;
+    font-family: 'ralewayBold';
+}
+
+.titrePrincipal {
+    font-size: large;
+}
+
+.titreMoyen {
+    margin-bottom: 2em;
+}
+
+.recherche {
+    border: 1px solid transparent;
+    width: 27em;
+    display: flex;
+    border-radius: 9px;
+    overflow: hidden;
+    margin-bottom: 2em;
+    height:45px;
+}
+
+input:focus {
+    outline:none;
+}
+
+.recherche>div:nth-child(1) {
+    background-color: #F2F2F2;
+    width: 10%;
+    text-align: center;
+    overflow: visible;
+}
+
+.recherche>div>i {
+    padding-top:35%;
+}
+
+button {
+    color: white;
+    font-size:medium;
+    width: 100%;
+    height: 100%;
+    border:none;
+    background-color:#0064fc;
+}
+
+button a {
+    margin-left: -15px;
+}
+
+button i {
+    visibility: hidden;
+}
+
+button:hover {
+    text-shadow: 1px 1px 2px white;
+}
+
+.recherche>div:nth-child(3) {
+    width: 35%;
+    border-radius: 0px 8px 8px 0px;
+}
+
+
+input {
+    text-align: center;
+    width: 55%;
+    height: 41px;
+    border: solid #F2F2F2 1px;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	03. FILTRES
+/*-----------------------------------------------------------------------------------*/
+
+.filtre H3 {
+    float:left;
+    margin-top: 0;
+    padding-top :6px;
+}
+
+.filtre ul {
+    display: flex;
+    flex-wrap : wrap;
+    list-style-type: none;
+}
+.filtre ul li {
+    margin-right: 25px;
+    width: 13em;
+    border-radius: 50px;
+    border: 1px solid #F2F2F2;
+    display: table;
+    margin-bottom: 1em;
+}
+
+.filtre ul li:hover {
+        box-shadow : 2px 2px 1em grey;
+    }
+.filtre ul li div{
+    border-radius: 25px 25px 25px 25px;
+    background-color: lightgrey;
+    float:left;
+    height: 35px;
+    width: 35px;    
+    text-align:center;
+    background-color:#DEEBFF;
+    overflow: visible;
+}
+.filtre ul li i {
+    color: #0064fc;
+    padding-top:25%;
+}
+
+.filtre ul li a {
+    vertical-align: middle;
+    display: table-cell;
+    font-family:'ralewayBold';
+
+
+}
+
+.filtre__BottomText {
+    padding-bottom: 10px;
+}
+
+.filtre__infoIcon {
+    border-radius: 25px 25px 25px 25px;
+    border: solid 1px lightgrey;
+    float:left;
+    height: 30px;
+    width: 30px;    
+    text-align:center;
+    background-color: white;
+    overflow: visible;
+}
+.filtre__infoIcon i {
+    color: #0064fc;
+    padding-top:25%;
+    font-size:small;
+}
+
+.titreMoyen--info {
+    padding-top: 8px;
+    padding-left: 40px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	04. HEBERGEMENTS
+/*-----------------------------------------------------------------------------------*/
+
+.lesLieux {
+    margin-bottom: 5em;
+    Display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.lesLieux h3 {
+    font-family: 'ralewayBold';
+}
+#container1
+{
+    background-color: #F2F2F2 ;
+    border-radius: 25px;
+    width : 65%;
+    float:left;
+    min-width:650px;
+}
+
+.contenuContainer1 {
+    display : flex;
+    flex-wrap : wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto
+}
+.contenuContainer1 a {
+    width: 30%;
+    text-decoration:none;
+    color: black;
+}
+
+.titreMarseilles h1{
+    margin-left: 5.5%;
+    margin-top : 2em;
+    font-family:'ralewayBold';
+}
+
+.hebergements__MoreText {
+    margin-top : 10px;
+    margin-bottom :50px;
+    font-family : 'RalewayBold';
+    font-size: medium;
+}
+
+.box
+{
+ background-color : white;
+ border : solid 3px white;
+ border-radius : 8%;
+ box-shadow : 1px 1px 1em lightgrey;
+ flex-wrap : wrap;
+ height: 15em;
+ min-width: 15rem;
+ Margin-bottom: 2em;
+}
+
+
+.box>h3,p{
+    font-size: small;
+    line-height : 0.4em;
+    text-align: left;
+    margin : 1em;
+}
+.box>img
+{ 
+    height: 65%;
+    width : 100%;
+    object-fit: cover;
+ border-radius : 10% 10% 0% 0%;
+
+}
+
+.etoiles {
+    margin: 0.8em;
+}
+
+.unchecked {
+    color : #F2F2F2;
+}
+.checked {
+    color : #0064fc;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	05. LES PLUS POPULAIRES
+/*-----------------------------------------------------------------------------------*/
+.lesPlusPopulaires
+{
+   width : 100%;
+   margin-left : 10%;
+   margin-top : 70px;
+}
+
+.lesPlusPopulaires h1 a {
+    padding-left:60px;
+}
+
+
+#container2
+{
+    background-color: #F2F2F2 ;
+    border-radius: 25px;
+    display : flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width : 30%;
+    min-width: 24em;
+    margin-left:3em;
+}
+.ContenuContainer2{
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
+.contenuContainer2 a {
+    text-decoration:none;
+    color: black;
+    width: 80%;
+    display:block;
+    margin: auto;
+}
+
+.boxpopu
+{
+ background-color : white;
+ border-radius : 10px;
+ box-shadow : 6px 6px 5em grey;
+ margin: auto;
+ height : 9em;
+ width:100%;
+ margin-bottom: 42px;
+ /* display:flex; */
+}
+
+
+.description {
+    padding-top : 2%;
+}
+.description>h3,p{
+    font-size: small;
+    text-align: left;
+    margin : 1em;
+}
+.boxpopu>div>img
+{ 
+    height: 9em;
+    width: 40%;
+    object-fit: cover;
+    border-radius : 10px 0px 0px 10px;
+    float: left;
+    margin-right: 1em;
+
+}
+
+.boxpopu div div{
+    margin-top : 45px;
+    }
+ 
+
+/*-----------------------------------------------------------------------------------*/
+/*	05. ACTIVITES
+/*-----------------------------------------------------------------------------------*/
+
+.container3 {
+margin-top: 20px;
+}
+
+.containe3 h2 {
+    font-family: 'ralewayBold';
+}
+
+#activites {
+    display:flex;
+    height: 450px;
+    justify-content: space-between;
+}
+
+.solo, .duo{
+    width: 22%;
+    height: 450px;
+    margin-bottom: auto;
+}
+
+.solo {
+    border: 2px;
+    border-radius: 25px;
+    box-shadow: 1px 1px 1em lightgrey;
+}
+
+
+.solo img, .duo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.duo div:nth-child(1) {
+    margin-bottom :22px;
+}
+
+.solo img {
+    height: 400px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.image-top{
+    height: 200px;
+}
+
+.image-bottom {
+    height: 130px;
+}
+
+
+.duo>div {
+    border: 2px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1em lightgrey;
+}
+
+.duo>div:nth-child(1) {
+    height: 248px;
+    border-radius: 20px;
+}
+
+.duo>div:nth-child(2) {
+    height:40%;
+    border-radius: 20px;
+}
+
+.activite__description p {
+text-align: center;
+font-family: 'RalewayBold';
+margin-top: 18px;
+text-align:left;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	06. FOOTER
+/*-----------------------------------------------------------------------------------*/
+#footer-content{
+    background-color: #F2F2F2 ;
+    width : 100%;
+    margin-top : 4em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.menufooter {
+    display : flex;
+    flex-wrap: wrap;
+    margin-left : 5em;
+    
+}
+
+.menu {
+    flex : 1;
+}
+
+.menu>h3 {
+    margin-left : 1.2em;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	07. Responsive
+/*-----------------------------------------------------------------------------------*/
+
+@media (max-width: 1200px) {
+
+    /*-----------------------------------------------------------------------------------*/
+    /*	01. GENERAL
+    /*-----------------------------------------------------------------------------------*/
+    h4 {
+        font-family : 'RalewayLight';
+    }
+
+    h1, h3 {
+        font-family : 'RalewayBold';
+    }
+
+    h3 {
+        font-size: large;
+    }
+
+    #mainContainer {
+        width:90%;
+        margin: auto;
+    }
+
+    #mainContainer2 {
+        width:100%;
+        margin: auto;
+    }
+    /*-----------------------------------------------------------------------------------*/
+    /*	02. MENU
+    /*-----------------------------------------------------------------------------------*/
+    #header {
+        width:100%;
+    }
+
+    header {
+        width:100%;
+        display:flex;
+        padding-top: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #header header div {
+        width:50%;
+    }
+
+    .sectionHaut {
+        padding: 0;
+    }
+    #logo {
+        flex : 1;
+        margin-top:0px;
+    }
+
+    #navbar {
+        display:none;
+    }
+    
+    #navbar--mobile {
+    display: flex;
+    flex : 1 ;
+    width:111.2%;
+    margin-left:-6%;
+    }
+
+    #navbar--mobile nav {
+        width:100%;
+    }
+
+    #navbar--mobile ul {
+        display:flex;
+        margin-left:-23px;
+    }
+
+    .navbar--mobile {
+        display: unset;
+        margin:auto;
+        display: flex;
+        justify-content: flex-end;
+        }
+    
+     .navbar--mobile a {
+            font-family : 'RalewayBold';
+            text-decoration:none;
+            color : #0064fc;
+        }
+    
+    #navbar--mobile ul li {
+        width:50%;
+        }
+
+    #navbar--mobile ul li div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+    #navbar--mobile ul li div a{
+        text-decoration: none;
+        color :grey;
+        font-size:large;
+        line-height: 3em;
+        width: 100%;
+        text-align: center;
+        border-bottom: 3px grey solid;
+    }
+
+    #navbar--mobile ul li div a:active{
+        color:#0064fc;
+        border-bottom: 3px #0064fc solid;
+    }
+
+    #navbar--mobile ul li:active {
+        width:50%;
+    }
+    
+    #navbar--mobile ul li:nth-child(3) div a{
+        font-weight: bold;
+        color : #0064fc;
+        font-family: 'ralewayBold';
+    }
+
+    .titrePrincipal {
+        font-size: larger;
+        padding-right: 2em;
+        font-size:1.7em;
+    }
+
+    .titreMoyen {
+        font-size: 1.1em;
+    }
+
+    .recherche {
+        width: 100%;
+    }
+
+    .recherche>div:nth-child(1) {
+        width: 3em;
+    }
+
+    .recherche>div>i {
+        padding-top:40%;
+    }
+
+    button a {
+    display: none;
+    }
+
+    button i {
+        visibility: visible;
+    }
+
+    .recherche>div:nth-child(3) {
+        width: 3em;
+    }
+
+
+    input {
+        width: 80%;
+        height: 4em;
+    }
+    /*-----------------------------------------------------------------------------------*/
+    /*	03. FILTRES
+    /*-----------------------------------------------------------------------------------*/
+
+    .filtre H3 {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .filtre ul {
+        justify-content: space-between;
+        margin-left : -2em;
+    }
+    .filtre ul li {
+        margin-left: 0em;
+        font-size: 1em;
+        width: 10px;
+        min-width: 150px;
+        margin-right:0;
+    }
+
+    .filtre ul li a {
+        padding-left: 15px;
+        padding-right: 15px;
+        white-space: nowrap;
+    }
+
+
+    /*-----------------------------------------------------------------------------------*/
+    /*	04. HEBERGEMENTS
+    /*-----------------------------------------------------------------------------------*/
+
+    .titreMarseilles h1 {
+        font-size:x-large;
+        margin-top:20px;
+    }
+    .lesLieux {
+        margin-bottom: 1em;
+        flex-wrap : wrap-reverse;
+    }
+    #container1 {
+        width : 100%;
+        min-width:0px;
+        margin: 0;
+        padding-top: 1em;
+        background-color: #FFFFFF ;
+        border-radius: 0;
+    }
+
+    .contenuContainer1 {
+        width: 100%;
+    }
+
+    .contenuContainer1 div {
+        width:90%;
+    }
+
+
+    .box {
+    border-radius : 25px;
+    Margin-bottom: 1.5em;
+    margin-left:auto;
+    margin-right:auto;
+    }
+
+    .box>h3{
+        font-size: medium;
+        font-family:'ralewayBold';
+        margin-left: 2.5%;
+    }
+    .box>img
+    { 
+        border-radius : 25px 25px 0px 0px;
+        overflow:hidden;
+    }
+    .contenuContainer1 a {
+        width:100%;
+    }
+
+    .hebergements__MoreText {
+    Margin-left: 5%;
+    font-size: large;
+    }       
+
+    /*-----------------------------------------------------------------------------------*/
+    /*	05. LES PLUS POPULAIRES
+    /*-----------------------------------------------------------------------------------*/
+    .lesPlusPopulaires {
+    margin-left : 7px;
+    margin-top : 2em;
+    font-size: 0.80em;
+    padding-bottom: 10px;
+    }
+
+    #container2 {
+        width: 100%;
+        padding: 2% 5% 10% 5%;
+        margin: 0;
+        border-radius: 0px;
+        min-width: 10em;
+    }
+
+    .boxpopu {
+    border-radius : 25px;
+    box-shadow : 3px 3px 2em lightgrey;
+    width:98%;
+    height : 10em;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 1em;
+    border : solid white 5px;
+    }
+
+    .boxpopu>div>img
+    { 
+        height: 10em;
+        width: 40%;
+        border-radius : 21px 0px 0px 21px;
+        overflow: hidden;
+    }
+
+    .contenuContainer2 a {
+        width:100%;
+    }
+
+
+    /*-----------------------------------------------------------------------------------*/
+    /*	05. ACTIVITES
+    /*-----------------------------------------------------------------------------------*/
+    #activites {
+        display: flex;
+        flex-direction: column;
+        height:1370px;
+    }
+
+    #activites>div:nth-child(1),
+    #activites>div:nth-child(3) {
+        width: 90%;
+        height: 16em;
+        margin-bottom:2em;
+    }
+
+    #activites>div>img {
+        width: 100%;
+        height: 77%;
+        object-fit: cover;
+    }
+
+
+    #activites>div>div>img {
+        width: 100%;
+        object-fit: cover;
+        height: 10em;
+    }
+
+    .solo {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .duo {
+        width: 100%;
+        height: 500px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .duo>div {
+        border: 2px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 1px 1px 1em lightgrey;
+        width: 90%;
+        margin-bottom:2em;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .duo>div:nth-child(1) {
+        border-radius: 20px;
+        height: 205px;
+    }
+
+    .duo>div:nth-child(2) {
+        border-radius: 20px;
+        height: 205px;
+    }
+
+    .image-top{
+        height: 140px;
+    }
+    
+    .image-bottom {
+        height: 130px;
+    }
+
+    .container3 h2 {
+        font-family:'ralewayBold';
+        margin-left:23px;
+
+    }
+
+    /*-----------------------------------------------------------------------------------*/
+    /*	06. FOOTER
+    /*-----------------------------------------------------------------------------------*/
+
+    .menufooter {
+        flex-direction: column;
+        margin-left : 1em;
+    }
+}
